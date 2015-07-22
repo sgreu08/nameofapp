@@ -1,7 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This FancyApp will mostly look super fancy and be super fun.
 
 Things you may want to cover:
 
