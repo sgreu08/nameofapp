@@ -48,3 +48,5 @@ group :development, :test do
   gem 'spring'
 end
 
+# Rack-Cache als Vorspeicher für Heroku
+gem 'rack-cache'
