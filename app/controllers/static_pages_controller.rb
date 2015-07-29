@@ -1,4 +1,8 @@
 class StaticPagesController < ApplicationController
-  def index
+
+  def landig_page
+    @featured_product = Product.first
   end
+
 end
+
