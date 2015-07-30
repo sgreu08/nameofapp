@@ -10,16 +10,39 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Lobster::latin', 'Shadows+Into+Light::latin', 'Pacifico::latin', 'Bangers::latin', 'Amatic+SC::latin', 'Covered+By+Your+Grace::latin', 'Lobster+Two::latin', 'Playball::latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+  </script>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
 <h1>NoWear Store</h1>
 
-<%= image_tag("shirt.jpg")%>
+<div class=image><%= image_tag("shirt.jpg")%></div>
 
 
-<h2>Your first choice when it comes to buying fancy T-shirts made with lots of love.</h2>
+<h2>
+  <p>Your one and only source for fancy shirts, comfy hoodies & extravagant slippers.</p>
+  <p> We guarantee that all our products are made with passion.</p>
+</h2>
 
+<h3>
+  <p>Including the famous "Rich Kids Of Instagram"</p>
+  <p> ~ Champagne Hoodie ~ </p> 
+</h3>
+ 
 <%= yield %>
 
 </body>
