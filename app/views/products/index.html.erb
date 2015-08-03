@@ -35,3 +35,22 @@
 <br>
 
 <%= link_to 'New Product', new_product_path %>
+<% image_tag(product.image_url) %>
+
+<div class="carousel-caption">
+  <%= product.name %>
+</div>
+
+<!-- Wrapper for slides -->
+<div class="carousel-inner" role="listbox">
+  <% @products.each do |product| %>
+    <div class="item<% " active" if product == @products.first %>">
+      <% image_tag(product.image_url) %>
+      <div class="carousel-caption">
+        <%= product.name %>
+      </div>
+    </div>
+  <% end %>
+</div> 
+
+
