@@ -18,7 +18,7 @@
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <% @counter.times do |n| %>
-    <li> data-target="#carousel-example-generic" data-slide-to="<%= n %>" class= "<%= "active" if n == 0 %>"</li>
+    <li data-target="#carousel-example-generic" data-slide-to="<%= n %>" class= "<%= "active" if n == 0 %>"></li>
     <% end %>
   </ol>
 
