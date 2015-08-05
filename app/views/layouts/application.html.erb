@@ -44,16 +44,7 @@
                 <li><%= link_to "Home", static_pages_landing_page_path %></li>
                 <li><%= link_to "Products", products_path %></li>
                 <li><%= link_to "About", static_pages_about_path %></li>
-                <li><%= link_to "Contact", static_pages_contact_path %></li>  <!-- add login and logout button for user -->
-                <% if user_signed_in? %>
-                  <li>
-                  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-                  </li>
-                <% else %>
-                  <li>
-                  <%= link_to('Login', new_user_session_path) %>
-                  </li>
-                <% end %>
+                <li><%= link_to "Contact", static_pages_contact_path %></li>
               </ul>
             </div>
           <!-- end navbar collapse -->
