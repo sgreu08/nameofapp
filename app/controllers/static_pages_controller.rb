@@ -12,6 +12,13 @@ class StaticPagesController < ApplicationController
   end 
 
   def index
+    if params [:q]
+      search_term = params [:q]
+      # return our filtered list here
+      @products = Product.where("name LIKE ?", "%#{search_term}%")
+    else
+      @products = Product.all
+    end
   end
 
   def about

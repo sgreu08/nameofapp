@@ -4,7 +4,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.limit(3)
+    @products = Product.all
+    search_term = params[:q]
   end
 
   # GET /products/1
