@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Products</h1>
+<h1>Our Shirts</h1>
 
 <table>
   <thead>
@@ -16,41 +16,12 @@
   </thead>
 
   <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
-        <td><%= product.description %></td>
-        <td width="300"><%= product.image_url %></td>
-        <td><%= product.color %></td>
-        <td><%= product.price%></td>
-        <td><%= product.size%></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+    <%= render @products %>
   </tbody>
 </table>
 
 <br>
 
 <%= link_to 'New Product', new_product_path %>
-<% image_tag(product.image_url) %>
-
-<div class="carousel-caption">
-  <%= product.name %>
-</div>
-
-<!-- Wrapper for slides -->
-<div class="carousel-inner" role="listbox">
-  <% @products.each do |product| %>
-    <div class="item<% " active" if product == @products.first %>">
-      <% image_tag(product.image_url) %>
-      <div class="carousel-caption">
-        <%= product.name %>
-      </div>
-    </div>
-  <% end %>
-</div> 
 
 
