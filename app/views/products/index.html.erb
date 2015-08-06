@@ -16,7 +16,9 @@
   </thead>
 
   <tbody>
-    <%= render product %>
+    <% @products.each do |product| %>
+      <%= render product %>
+    <% end %>
   </tbody>
 </table>
 
