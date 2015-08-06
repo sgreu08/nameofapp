@@ -50,3 +50,5 @@ end
 
 # Rack-Cache als Vorspeicher für Heroku
 gem 'rack-cache'
+
+gem 'devise'

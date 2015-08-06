@@ -14,6 +14,7 @@
     <%= csrf_meta_tags %>
 </head>
 <body>
+
 <!-- Add Flash Notice Tags - the block will display a welcoming message when you are signing in --> 
 
     <!-- navbar starts here -->
@@ -39,7 +40,7 @@
               <% end %>
               </div><!--Search Function ends here -->
             </div>
-            
+
             <!-- end navbar-header-->
             <div class="navbar-collapse collapse">
               <ul class="navbar-collapse collapse">
@@ -47,6 +48,15 @@
                 <li><%= link_to "Products", products_path %></li>
                 <li><%= link_to "About", static_pages_about_path %></li>
                 <li><%= link_to "Contact", static_pages_contact_path %></li>
+                <!-- add login and logout button for user -->
+                <% if user_signed_in? %>
+                  <li>
+                  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                  <li>
+                <%= else %>
+                  <%= link_to('Login', new_user_session_path) %>
+                  </li>
+                <% end %>
               </ul>
             </div>
           <!-- end navbar collapse -->
