@@ -1,17 +1,12 @@
 Rails.application.routes.draw do
-
-  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
-
-  resources :products do
+  devise_for :users
+ 
+ resources :products do 
     resources :comments
   end
   resources :users
-  
-  get 'static_pages/contact'
 
   get 'static_pages/about'
-
-  get 'static_pages/abut'
 
   get 'static_pages/contact'
 
@@ -19,14 +14,24 @@ Rails.application.routes.draw do
 
   get 'static_pages/landing_page'
 
+# Generate template for Email
   post 'static_pages/thank_you'
+
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  
   root 'static_pages#landing_page'
+
+  # Include Routes for Orders 
   resources :orders, only: [:index, :show, :new, :create]
+
+
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -76,4 +81,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
 end
