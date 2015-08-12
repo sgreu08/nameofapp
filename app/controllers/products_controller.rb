@@ -3,6 +3,8 @@ class ProductsController < ApplicationController
 
   before_filter :authentic_user!
 
+
+
   # GET /products
   # GET /products.json
   def index
@@ -13,6 +15,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @comments = @product.comments.all.order ("created_at DESC")
   end
 
   # GET /products/new
@@ -74,4 +77,6 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :description, :image_url, :color, :price, :size)
     end
+
+
 end
