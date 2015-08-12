@@ -1,14 +1,6 @@
 Rails.application.routes.draw do
 
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
-  
-  def create
-    @product = Product.find(params [:product_id])
-    @comment = @product.comments.new(comment_params)
-    @comment.user = current_user
-    @comment.save
-    redirect_to products_path(@product)
-  end
 
   resources :products do
     resources :comments
