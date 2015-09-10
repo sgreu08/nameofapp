@@ -48,7 +48,24 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  # Add rspec
   gem 'rspec-rails', '~> 3.0'
+
+  # Add Guard
+  gem 'guard'
+
+  # Add Guard Rspec addon
+  gem 'guard-rspec', require: false
+
+  # Add spork from github first to solve a problem with the new version of rspec
+  gem 'spork', github: 'sporkrb/spork'
+
+  # Add Spork
+  gem 'spork-rails'
+
+  # Add guard-spork link
+  gem 'guard-spork'
+  
 end
 
 # Rack-Cache als Vorspeicher für Heroku
@@ -57,4 +74,5 @@ gem 'rack-cache'
 gem 'devise'
 
 ## Gemfile for Rails 3+, Sinatra, or Merb
+# Pagination
 gem 'will_paginate', '~> 3.0.5'
