@@ -57,14 +57,6 @@ group :development, :test do
   # Add Guard Rspec addon
   gem 'guard-rspec', require: false
 
-  # Add spork from github first to solve a problem with the new version of rspec
-  gem 'spork', github: 'sporkrb/spork'
-
-  # Add Spork
-  gem 'spork-rails'
-
-  # Add guard-spork link
-  gem 'guard-spork'
   
 end
 
