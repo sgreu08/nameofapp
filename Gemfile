@@ -6,6 +6,9 @@ gem 'rails', '4.2.3'
 
 gem 'cancancan', '~> 1.10'
 
+# Factory girl
+gem 'factory_girl_rails', '~> 4.0'
+
 group :production do
   gem 'rails_12factor'
   gem 'pg'
