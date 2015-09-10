@@ -56,6 +56,20 @@ group :development, :test do
   
 end
 
+group :development do
+  gem 'guard'
+
+  gem 'guard-rspec', require: false
+
+  gem 'spork-rails'
+
+  gem 'guard-spork'
+
+end
+
+
+# (Since spork-rails depends on spork, it is not necessary to put both spork and spork-rails in your Gemfile)
+
 # Rack-Cache als Vorspeicher für Heroku
 gem 'rack-cache'
 
