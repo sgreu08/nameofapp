@@ -1,0 +1,14 @@
+<script
+  src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+  data-image="/square-image.png"
+  data-name="Demo Site"
+  data-description="2 widgets ($20.00)"
+  data-amount="2000">
+</script>
+<input type="hidden" name="productName" value="<%= @product.name %>" >
+ <input type="hidden" name="productPrice" value="<%= @product.price %>" >
+ <input type="hidden" name="productID" value="<%= @product.id %>" >
+ <input type="hidden" name="userID" value="<%= :currentUser %>" >
+
+<!-- Missing: user id -->

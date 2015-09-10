@@ -51,6 +51,7 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
   # Add rspec
   gem 'rspec-rails', '~> 3.0'
   
@@ -78,3 +79,5 @@ gem 'devise'
 ## Gemfile for Rails 3+, Sinatra, or Merb
 # Pagination
 gem 'will_paginate', '~> 3.0.5'
+
+gem 'stripe'
