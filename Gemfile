@@ -50,13 +50,6 @@ group :development, :test do
   gem 'spring'
   # Add rspec
   gem 'rspec-rails', '~> 3.0'
-
-  # Add Guard
-  gem 'guard'
-
-  # Add Guard Rspec addon
-  gem 'guard-rspec', require: false
-
   
 end
 
